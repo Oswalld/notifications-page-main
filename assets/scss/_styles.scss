@@ -1,0 +1,187 @@
+//Colors
+//Primary
+
+$Red: hsl(1, 90%, 64%);
+$Blue: hsl(219, 85%, 26%);
+//Neutral
+
+$White: hsl(0, 0%, 100%);
+$Very-light-grayish-blue: hsl(210, 60%, 98%);
+$Light-grayish-blue-1: hsl(211, 68%, 94%);
+$Light-grayish-blue-2: hsl(205, 33%, 90%);
+$Grayish-blue: hsl(219, 14%, 63%);
+$Dark-grayish-blue: hsl(219, 12%, 42%);
+$Very-dark-blue: hsl(224, 21%, 14%);
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #F7FAFD;
+    padding: 63px 0;
+  }
+
+  .notification-container{
+    width: 730px;
+    background-color: $White;
+    padding: 17px 30px;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(73, 97, 168, 0.05);
+  }
+
+  .top{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 31px;
+
+    .title{
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        
+        color: $Very-dark-blue;
+
+        h1{
+            font-size: 24px;
+            font-weight: 800;
+        }
+        
+    }
+
+    .notification-count{
+        background-color: $Blue;
+        color: $White;
+        border-radius: 6px;
+        padding: 1px 11px;
+        font-weight: 800;
+    }
+
+    .clear{
+        color: $Dark-grayish-blue;
+        border: none;
+        background-color: transparent;
+        &:hover{
+            cursor: pointer; 
+            color:$Blue;
+        }
+    }
+  }
+
+
+
+
+
+  .notification:nth-child(-n +4){
+    background-color:#F7FAFD;
+  }
+
+
+  .notification{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 19px;
+    padding: 18px 20px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+
+    &:hover{
+        cursor: pointer;
+        background-color: #F7FAFD !important;
+    }
+
+    img{
+        height: 45px;
+        width: 45px;
+    }
+
+    .picture{
+        position: relative;
+        width: 100%;
+        display: flex;
+        gap: 19px;
+
+        .image{
+            position: absolute;
+            right: 0;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+  }
+
+  .duration{
+    color: $Grayish-blue;
+  }
+
+.notification-text:not(.relou){
+    display: flex;
+    align-items: center;
+}
+
+  .notification-text{
+    margin-bottom: 4px;
+    color: $Dark-grayish-blue;
+      .event{
+        font-weight: 800;
+        margin-left: 7px;
+
+        &:hover{
+            cursor: pointer; 
+            color:$Blue;
+        }
+      }
+    
+      .user{
+        color: $Very-dark-blue;
+        font-weight: 800;
+        margin-right: 7px;
+
+        &:hover{
+            cursor: pointer; 
+            color:$Blue;
+        }
+      }
+  }
+
+  .message{
+    margin-top: 13px;
+    color: $Dark-grayish-blue;
+    padding: 17px 20px;
+    border: 1px solid #DDE7EE;
+    border-radius: 5px;
+
+    &:hover{
+        cursor: pointer; 
+        background-color: #E5EFFA;
+    }
+  }
+
+  .notification-icon{
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: $Red;
+    border-radius: 999px;
+    margin-left: 6px;
+  }
+
+  .club{
+    margin-left: 6px;
+    color: $Blue;
+    font-weight: 800;
+  }
